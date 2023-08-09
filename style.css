@@ -48,13 +48,18 @@ button:active {
   transform: scale(0.95);
 }
 
-.button--black {
+button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn--black {
   --button-color: #FFF;
   --button-bg: #000;
   --button-hover-bg: #1A1A1A;
 }
 
-.button--blurple {
+.btn--blurple {
   --button-color: #FFF;
   --button-bg: #5865F2;
   --button-hover-bg: #4C5AF1;
@@ -66,9 +71,13 @@ button:active {
 
 /* custom */
 
+#root {
+  padding: 3rem 1.5rem;
+}
+
 .calculator {
   display: inline-block;
-  margin: 1rem;
+  margin-top: 1rem;
   border: 1px solid #DADADA;
   padding: 1rem;
 }
@@ -76,6 +85,8 @@ button:active {
 #display {
   border: 1px solid #DADADA;
   padding: 0.5rem 1rem;
+  width: 100%;
+  background-color: #E1E1E1;
 }
 
 .controls {
@@ -86,19 +97,13 @@ button:active {
   display: flex;
 }
 
-#clearButton {
-  margin-bottom: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-}
-
-#inputButtons {
+#inputBtns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.25rem;
 }
 
-#operatorButtons {
+#operationBtns {
   margin-left: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
