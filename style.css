@@ -24,6 +24,88 @@ p {
 }
 
 button {
+  --button-color: #000;
+  --button-bg: #FFF;
+  --button-hover-bg: #F5F5F5;
+  border: 1px solid #DADADA;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
   font-family: inherit;
   font-size: 100%;
+  color: var(--button-color);
+  background-color: var(--button-bg);
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn--black {
+  --button-color: #FFF;
+  --button-bg: #000;
+  --button-hover-bg: #1A1A1A;
+}
+
+.btn--blurple {
+  --button-color: #FFF;
+  --button-bg: #5865F2;
+  --button-hover-bg: #4C5AF1;
+}
+
+.grid-row-span-2 {
+  grid-row: span 2;
+}
+
+/* custom */
+
+#root {
+  padding: 3rem 1.5rem;
+}
+
+.calculator {
+  display: inline-block;
+  margin-top: 1rem;
+  border: 1px solid #DADADA;
+  padding: 1rem;
+}
+
+#display {
+  border: 1px solid #DADADA;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  background-color: #E1E1E1;
+}
+
+.controls {
+  margin-top: 1rem;
+}
+
+.row {
+  display: flex;
+}
+
+#inputBtns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem;
+}
+
+#operationBtns {
+  margin-left: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.25rem;
 }
